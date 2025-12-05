@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | The Bank of Myanmar History</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #2b1a33;
+        --card: #1e1226;
+        --muted: #c1b3d1;
+        --accent: #d4af37;
+        --glass: rgba(255, 255, 255, 0.06);
+        font-family: "Inter", sans-serif;
+        color-scheme: dark;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: linear-gradient(180deg, #220d2c 0%, #1a0a23 60%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #f0eaff;
+      }
+
+      .login-container {
+        width: 360px;
+        background: var(--card);
+        padding: 32px;
+        border-radius: 14px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45);
+      }
+
+      h2 {
+        font-family: "Playfair Display";
+        margin: 0 0 18px;
+        font-size: 26px;
+        text-align: center;
+        color: var(--accent);
+      }
+
+      label {
+        display: block;
+        margin: 10px 0 6px;
+        font-size: 14px;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 8px;
+        background: #160a1c;
+        color: #fff;
+        outline: none;
+        margin-bottom: 10px;
+      }
+
+      .btn {
+        width: 100%;
+        background: linear-gradient(90deg, var(--accent), #f3d77c);
+        padding: 10px;
+        border-radius: 8px;
+        font-weight: 700;
+        border: none;
+        cursor: pointer;
+        margin-top: 10px;
+        color: #230d00;
+      }
+
+      .btn:hover {
+        opacity: 0.9;
+      }
+
+      .links {
+        text-align: center;
+        font-size: 13px;
+        margin-top: 12px;
+        color: var(--muted);
+      }
+      .links a {
+        color: var(--accent);
+      }
+
+      /* Hover glow — because why not */
+      .back-btn:hover {
+        background: #ffdd00;
+        transform: translateY(-2px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>Member Login</h2>
+
+      <form>
+        <label for="username">Username:</label>
+        <input
+          type="text"
+          id="username"
+          placeholder="Enter username"
+          required
+        />
+
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter password"
+          required
+        />
+
+        <button class="btn">Login</button>
+      </form>
+
+      <div class="links">
+        <p>Forgot password? <a href="#">Reset here</a></p>
+        <p>New visitor? <a href="#">Register</a></p>
+      </div>
+    </div>
+  </body>
+</html>

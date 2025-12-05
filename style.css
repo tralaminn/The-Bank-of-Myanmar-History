@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #111;
+}
+
+p {
+  color: azure;
+  font-weight: bold;
+}
+
+.content h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.content h2 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.content {
+  text-align: center;
+  justify-content: center;
+}
+
+.content ul {
+  color: wheat;
+  list-style-type: none;
+}
+
+.subject {
+  border-left: 10px rgb(108, 142, 108) solid;
+  background-color: rgb(0, 0, 0);
+  margin: 20px;
+  padding: 15px;
+  font-size: 16px;
+}
+
+.subject1 {
+  border-left: 10px rgb(185, 177, 97) solid;
+  background-color: rgb(62, 59, 59);
+  margin: 20px;
+  padding: 15px;
+  font-size: 16px;
+}
+
+footer {
+  text-align: center;
+  background-color: rgb(199, 201, 203);
+}
+footer p {
+  color: black;
+}
+
+header {
+  backdrop-filter: blur(6px);
+  background: linear-gradient(
+    180deg,
+    rgba(11, 17, 25, 0.55),
+    rgba(11, 17, 25, 0.2)
+  );
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.518);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand h1 {
+  margin: 0;
+  font-family: "Playfair Display";
+  font-size: 18px;
+  color: wheat;
+}
+
+.brand p {
+  margin: 0;
+  font-size: 12px;
+  color: wheat;
+}
+
+nav ul {
+  display: flex;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+}
+
+nav a {
+  color: wheat;
+  text-decoration: none;
+}
+
+nav a:hover {
+  opacity: 0.8;
+  transition: 0.2s;
+}

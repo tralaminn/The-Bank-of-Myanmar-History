@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ancient City-States</title>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(180deg, #2c1b1b, #4a2a2a);
+        font-family: "Poppins", sans-serif;
+        color: white;
+      }
+
+      nav {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        background-color: rgb(123, 84, 47);
+        padding: 15px;
+        backdrop-filter: blur(4px);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        padding: 10px 15px;
+        border-radius: 8px;
+        transition: 0.3s;
+      }
+      nav a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: scale(1.05);
+      }
+
+      .section {
+        display: flex;
+        gap: 20px;
+        padding: 40px;
+        margin: 40px 30px;
+        border-radius: 25px;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+        transition: 0.3s ease-in-out;
+        align-items: center;
+      }
+
+      .section:hover {
+        transform: scale(1.02);
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.7);
+      }
+
+      .H1 {
+        background: linear-gradient(135deg, #8b1e1e, #b34747);
+      }
+      .H2 {
+        background: linear-gradient(135deg, #6e3e1e, #a06038);
+      }
+      .H3 {
+        background: linear-gradient(135deg, #9a4d1e, #c2763f);
+      }
+
+      .section img {
+        width: 260px;
+        height: 260px;
+        object-fit: cover;
+        border-radius: 20px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        border: 3px solid rgba(255, 255, 255, 0.3);
+      }
+
+      h1 {
+        margin-top: 0;
+        font-size: 30px;
+        font-weight: 600;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.6;
+      }
+      header {
+        backdrop-filter: blur(6px);
+        background: rgb(123, 84, 47);
+        position: sticky;
+        top: 0;
+        z-index: 30;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 12px 0;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .brand h1 {
+        margin: 0;
+        font-family: "Playfair Display";
+        font-size: 18px;
+      }
+
+      .brand p {
+        margin: 0;
+        font-size: 12px;
+        color: var(--muted);
+      }
+
+      nav ul {
+        display: flex;
+        gap: 18px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 14px;
+      }
+
+      nav a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      nav a:hover {
+        opacity: 0.8;
+        transition: 0.2s;
+      }
+      footer {
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.03);
+        padding: 22px 0;
+        margin-top: 36px;
+        color: var(--muted);
+      }
+
+      .byline {
+        font-size: 13px;
+        color: var(--muted);
+      }
+      .small {
+        font-size: 13px;
+        color: var(--muted);
+      }
+      footer {
+        background: #5c3d2e;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        margin-top: 40px;
+        font-size: 0.9rem;
+      }
+            .footer {
+        color: #fff;
+        padding: 50px 20px;
+        font-family: Arial, sans-serif;
+      }
+
+      .footer-container {
+        max-width: 1300px;
+        margin: auto;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+
+      .footer-column {
+        width: 23%;
+        min-width: 200px;
+      }
+
+      .footer-column h3 {
+        font-size: 16px;
+        margin-bottom: 15px;
+        letter-spacing: 2px;
+      }
+
+      .footer-column ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-column ul li {
+        margin-bottom: 10px;
+      }
+
+      .footer-column ul li a {
+        color: #cfcfcf;
+        text-decoration: none;
+      }
+
+      .footer-column ul li a:hover {
+        color: #fff;
+      }
+
+      .social-icons span {
+        font-size: 28px;
+        margin-right: 15px;
+      }
+    </style>
+  </head>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img
+          src="logo.jpg"
+          alt="Description"
+          style="width: 16%; height: 60%; border-radius: 100%"
+        />
+        <div>
+          <h1>The Bank of Myanmar History</h1>
+        </div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="ancient_city-states_period.html">Ancient City</a></li>
+          <li>
+            <a href="three_burmese_kingdoms.html">Three Burmese Kingdom</a>
+          </li>
+          <li><a href="coloni.html">Colonial Period</a></li>
+          <li><a href="post_independence_period.html">Post-Independence</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <body>
+    <br />
+    <h1 style="text-align: center">Ancient City-States Period</h1>
+    <div class="section H1" id="H1">
+      <img src="pyusawhti.jpg" alt="Ancient City-States" />
+      <div>
+        <h1>Government and Wealth Control</h1>
+        <p>
+          The government during the Pyu, Mon, and Rakhine civilizations was led
+          by kings who controlled most wealth and resources. They stored
+          valuable items such as gold and gemstones in royal palaces and
+          religious sites. Temples also played an important role in managing
+          wealth because religion and politics were closely connected.
+        </p>
+      </div>
+    </div>
+
+    <div class="section H2" id="H2">
+      <img
+        src="The Pyu City-States (ပျူမြို့ပြများ).jpg"
+        alt="Pyu City-States"
+      />
+      <div>
+        <h1>Business and Trade Systems</h1>
+        <p>
+          Business activities were mainly based on agriculture and trade. There
+          were no banks, so traders used barter or valuable metals to exchange
+          goods. Trade routes connected Myanmar with India and China, bringing
+          silk, jewelry, and pottery into the region, while exporting rice and
+          local crafts.
+        </p>
+      </div>
+    </div>
+
+    <div class="section H3" id="H3">
+      <img src="Pyu_city-states.png" alt="Mon Kingdoms" />
+      <div>
+        <h1>Education and Daily Life</h1>
+        <p>
+          Knowledge was mostly passed down through monks and local leaders.
+          People learned skills like farming, crafting, and trading from their
+          families. Most citizens lived simple lives focused on farming and
+          community work, without the need for a banking system like today.
+        </p>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-container">
+
+        <div class="footer-column">
+          
+          <img src="logo.jpg" width="97%" height="97%" style="border-radius: 100%;">
+        </div>
+
+        <div class="footer-column">
+          <h3>CONTACT US</h3>
+          <ul>
+            <li>Phone: 099790682189</li>
+            <li>Email: myanmarhistory@gmail.com</li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>JOIN US</h3>
+          <ul>
+            <li><a href="login.html">Longin to be a part of us.</a></li>
+          </ul>
+        </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+          "
+        >
+          <div class="small">
+            <p>©The Bank of Myanmar History — Group Project by Tra La Min, Myat Thaw Htin, Hsu Waddy, and Nyei Thawdar Lwin </p>
+          </div>
+          <div class="small"><code></code></div>
+        </div>
+      </footer>
+  </body>
+</html>

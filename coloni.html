@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Three Burmese Kingdoms</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Times New Roman", serif;
+        color: #2a241f;
+        background: #ffffff;
+        scroll-behavior: smooth;
+      }
+
+      .hero {
+        height: 100vh;
+        background: url("BG_Image.jpg") center/cover no-repeat;
+        position: relative;
+      }
+
+      .overlay {
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.55);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #ffffff;
+      }
+
+      .overlay h1 {
+        font-size: 3rem;
+        letter-spacing: 2px;
+      }
+
+      .overlay p {
+        font-size: 1.3rem;
+        margin: 10px 0;
+      }
+
+      .cta-btn {
+        background: gold;
+        color: rgb(0, 0, 0);
+        padding: 12px 25px;
+        border-radius: 8px;
+        margin-top: 20px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      .cta-btn:hover {
+        background: #ffdd55;
+      }
+
+      .kingdom {
+        padding: 60px 20px;
+        text-align: center;
+        border-bottom: 2px solid #160847;
+      }
+
+      .kingdom h2 {
+        font-size: 2rem;
+        color: #000000;
+      }
+
+      .kingdom ul {
+        text-align: left;
+        max-width: 600px;
+        margin: 20px auto;
+      }
+
+      .photo-box {
+        width: 75%;
+        max-width: 750px;
+        margin: 20px auto;
+      }
+
+      .photo-box img {
+        width: 100%;
+        border-radius: 15px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+        transition: transform 0.4s;
+      }
+
+      .photo-box img:hover {
+        transform: scale(1.04);
+      }
+
+      footer {
+        background: #5c3d2e;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        margin-top: 40px;
+        font-size: 0.9rem;
+      }
+
+      header {
+        background: rgb(123, 84, 47);
+        position: sticky;
+        top: 0;
+        z-index: 30;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 12px 0;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .brand h1 {
+        margin: 0;
+        font-family: "Playfair Display";
+        font-size: 18px;
+      }
+
+      .brand p {
+        margin: 0;
+        font-size: 12px;
+        color: var(--muted);
+      }
+
+      nav ul {
+        display: flex;
+        gap: 18px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 14px;
+      }
+
+      nav a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+      }
+      .footer {
+        color: #fff;
+        padding: 50px 20px;
+        font-family: Arial, sans-serif;
+      }
+
+      .footer-container {
+        max-width: 1300px;
+        margin: auto;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+
+      .footer-column {
+        width: 23%;
+        min-width: 200px;
+      }
+
+      .footer-column h3 {
+        font-size: 16px;
+        margin-bottom: 15px;
+        letter-spacing: 2px;
+      }
+
+      .footer-column ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-column ul li {
+        margin-bottom: 10px;
+      }
+
+      .footer-column ul li a {
+        color: #cfcfcf;
+        text-decoration: none;
+      }
+
+      .footer-column ul li a:hover {
+        color: #fff;
+      }
+
+      .social-icons span {
+        font-size: 28px;
+        margin-right: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+        <div class="brand">
+          <img
+            src="logo.jpg"
+            alt="Description"
+            style="width: 16%; height: 60%; border-radius: 100%"
+          />
+          <div>
+            <h1 style="color: white">The Bank of Myanmar History</h1>
+          </div>
+        </div>
+
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ancient_city-states_period.html">Ancient City</a></li>
+            <li>
+              <a href="three_burmese_kingdoms.html">Three Burmese Kingdom</a>
+            </li>
+            <li><a href="coloni.html">Colonial Period</a></li>
+            <li>
+              <a href="post_independence_period.html">Post-Independence</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="overlay">
+        <h1>Coloni Period</h1>
+        <p>British Administration of Burma</p>
+        <a href="#bagan" class="cta-btn">Explore</a>
+      </div>
+    </section>
+
+    <section id="bagan" class="kingdom">
+      <h2>Government and Financial Control</h2>
+
+      <div class="photo-box">
+        <img src="colonial_1.jpg" alt="Bagan" />
+      </div>
+
+      <p style="text-align: left; margin-left: 50px">
+        The British government replaced the traditional monarchy and completely changed how money and trade were managed in Myanmar. Foreign banks, mainly British and Indian, controlled all financial activities, including deposits, loans, and large business transactions. Local rulers and Burmese officials had almost no power in the financial sector. The Indian rupee became the official currency, making it easier for the British to handle trade within their empire but reducing Myanmar’s financial independence. Important resources and decisions about money were controlled from outside the country.
+      </p>
+    </section>
+
+    <section id="taungoo" class="kingdom">
+      <h2>Business and Economic Changes</h2>
+
+      <div class="photo-box">
+        <img src="colonial_2.jpg" alt="Taungoo" />
+      </div>
+
+      <p style="text-align: left; margin-left: 50px">
+        Business during colonial times centered mainly on rice cultivation and export because the British wanted to earn profit from Myanmar’s fertile land. Major companies from Britain and India owned large rice mills and shipping businesses, taking most of the income overseas. Local farmers were encouraged to grow more rice, but they rarely received fair payments for their crops. Many farmers borrowed money from Indian moneylenders with high interest rates and could not repay their debts. When harvests failed or prices dropped, they lost their land and became laborers. Other industries such as oil, teak wood, and mining were also controlled by foreign companies, leaving local people with limited economic opportunities.
+      </p>
+    </section>
+
+    <section id="konbaung" class="kingdom">
+      <h2>Education and Daily Life under British Rule</h2>
+
+      <div class="photo-box">
+        <img src="colonial_3.jpg" alt="Konbaung" />
+      </div>
+
+      <p style="text-align: left; margin-left: 50px">
+        Education expanded with more schools built, but it mostly focused on English language and British-style learning, benefiting only those who could afford it. Financial education or banking skills were mainly taught to foreigners, wealthy Burmese, or people working for the colonial government. In daily life, ordinary Burmese continued to rely on traditional lending from family or village groups because modern banks did not support local needs or smaller businesses. Most people lived simple agricultural lives, but new influences started to appear, such as imported goods, Western clothing, and new job types in cities. Even though modernization was growing, inequality increased, and many Burmese felt that colonial money systems helped foreigners more than local communities.
+      </p>
+    </section>
+
+     <footer class="footer">
+      <div class="footer-container">
+
+        <div class="footer-column">
+          
+          <img src="logo.jpg" width="97%" height="97%" style="border-radius: 100%;">
+        </div>
+
+        <div class="footer-column">
+          <h3>CONTACT US</h3>
+          <ul>
+            <li>Phone: 099790682189</li>
+            <li>Email: myanmarhistory@gmail.com</li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>JOIN US</h3>
+          <ul>
+            <li><a href="login.html">Longin to be a part of us.</a></li>
+          </ul>
+        </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+          "
+        >
+          <div class="small">
+            <p>©The Bank of Myanmar History — Group Project by Tra La Min, Myat Thaw Htin, Hsu Waddy, and Nyei Thawdar Lwin </p>
+          </div>
+          <div class="small"><code></code></div>
+        </div>
+      </footer>
+  </body>
+</html>

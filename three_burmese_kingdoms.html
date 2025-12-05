@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Three Burmese Kingdoms</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Times New Roman", serif;
+        color: #2a241f;
+        background: #fdf8ee;
+        scroll-behavior: smooth;
+      }
+
+      .hero {
+        height: 100vh;
+        background: url("hero.jpg") center/cover no-repeat;
+        position: relative;
+      }
+
+      .overlay {
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.55);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #fff;
+      }
+
+      .overlay h1 {
+        font-size: 3rem;
+        letter-spacing: 2px;
+      }
+
+      .overlay p {
+        font-size: 1.3rem;
+        margin: 10px 0;
+      }
+
+      .cta-btn {
+        background: gold;
+        color: black;
+        padding: 12px 25px;
+        border-radius: 8px;
+        margin-top: 20px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      .cta-btn:hover {
+        background: #ffdd55;
+      }
+
+      .kingdom {
+        padding: 60px 20px;
+        text-align: center;
+        border-bottom: 2px solid #d7c1a3;
+      }
+
+      .kingdom h2 {
+        font-size: 2rem;
+        color: #5c3d2e;
+      }
+
+      .kingdom ul {
+        text-align: left;
+        max-width: 600px;
+        margin: 20px auto;
+      }
+
+      .photo-box {
+        width: 75%;
+        max-width: 750px;
+        margin: 20px auto;
+      }
+
+      .photo-box img {
+        width: 100%;
+        border-radius: 15px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+        transition: transform 0.4s;
+      }
+
+      .photo-box img:hover {
+        transform: scale(1.04);
+      }
+
+      footer {
+        background: #5c3d2e;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        margin-top: 40px;
+        font-size: 0.9rem;
+      }
+
+      .back-btn:hover {
+        background: #ffdd00;
+        transform: translateY(-2px);
+      }
+
+      header {
+        background: rgb(123, 84, 47);
+        position: sticky;
+        top: 0;
+        z-index: 30;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 12px 0;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .brand h1 {
+        margin: 0;
+        font-family: "Playfair Display";
+        font-size: 18px;
+      }
+
+      .brand p {
+        margin: 0;
+        font-size: 12px;
+        color: var(--muted);
+      }
+
+      nav ul {
+        display: flex;
+        gap: 18px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 14px;
+      }
+
+      nav a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+      }
+      .footer {
+        color: #fff;
+        padding: 50px 20px;
+        font-family: Arial, sans-serif;
+      }
+
+      .footer-container {
+        max-width: 1300px;
+        margin: auto;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+
+      .footer-column {
+        width: 23%;
+        min-width: 200px;
+      }
+
+      .footer-column h3 {
+        font-size: 16px;
+        margin-bottom: 15px;
+        letter-spacing: 2px;
+      }
+
+      .footer-column ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-column ul li {
+        margin-bottom: 10px;
+      }
+
+      .footer-column ul li a {
+        color: #cfcfcf;
+        text-decoration: none;
+      }
+
+      .footer-column ul li a:hover {
+        color: #fff;
+      }
+
+      .social-icons span {
+        font-size: 28px;
+        margin-right: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+        <div class="brand">
+          <img
+            src="logo.jpg"
+            alt="Description"
+            style="width: 16%; height: 60%; border-radius: 100%"
+          />
+          <div>
+            <h1 style="color: white">The Bank of Myanmar History</h1>
+          </div>
+        </div>
+
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ancient_city-states_period.html">Ancient City</a></li>
+            <li>
+              <a href="three_burmese_kingdoms.html">Three Burmese Kingdom</a>
+            </li>
+            <li><a href="coloni.html">Colonial Period</a></li>
+            <li>
+              <a href="post_independence_period.html">Post-Independence</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="overlay">
+        <h1>The Three Great Burmese Kingdoms</h1>
+        <p>Where history rises like golden pagodas against the sky</p>
+        <a href="#bagan" class="cta-btn">Explore</a>
+      </div>
+    </section>
+
+    <section id="bagan" class="kingdom">
+      <h2>Bagan Kingdom (849–1297)</h2>
+      <p>
+        The birthplace of Buddhist culture in Myanmar. Where over 10,000 temples
+        once touched the sky.
+      </p>
+
+      <div class="photo-box">
+        <img src="bagan.jpg" alt="Bagan" />
+      </div>
+
+      <p style="text-align: left; margin-left: 50px">
+        The Bagan Kingdom had a strong central government led by powerful kings,
+        especially Anawrahta. The king controlled land, taxes, and worked
+        closely with Buddhist monasteries, which also managed wealth. Business
+        activities centered on farming and river trade, especially rice,
+        handicrafts, and religious items. Bagan traded with India, China, and
+        Southeast Asia, spreading Buddhism and culture. Education took place
+        mainly in monasteries, where monks taught boys reading, writing, and
+        Buddhist teachings. Most people were farmers who lived simple lives,
+        supported religion, and helped build pagodas to earn merit..
+      </p>
+    </section>
+
+    <section id="taungoo" class="kingdom">
+      <h2>Taungoo Kingdom (1510–1752)</h2>
+      <p>
+        The empire of fearless warriors — biggest in Southeast Asia under
+        Bayinnaung.
+      </p>
+
+      <div class="photo-box">
+        <img src="taungoo.jpg" alt="Taungoo" />
+      </div>
+
+      <p style="text-align: left; margin-left: 50px">
+        Under the Taungoo rulers, especially King Bayinnaung, the empire grew
+        very large and became more organized, with stronger armies and better
+        administration. Trade expanded as the kingdom gained new territories,
+        and the use of coins became common, making business easier. Farmers
+        produced more for taxes, and merchants traded with India, China, and
+        Southeast Asia. Monasteries remained the main places for education.
+        Daily life saw busier markets and more imported goods, while most people
+        continued farming and following community traditions despite frequent
+        wars.
+      </p>
+    </section>
+
+    <section id="konbaung" class="kingdom">
+      <h2>Konbaung Kingdom (1752–1885)</h2>
+      <p>
+        The final royal dynasty — bold kings, shiny palaces, and battles with
+        the British.
+      </p>
+
+      <div class="photo-box">
+        <img src="konbaung.jpg" alt="Konbaung" />
+      </div>
+
+      <p style="text-align: left; margin-left: 50px">
+        The Konbaung kings worked to modernize administration with better
+        record-keeping, taxation, and communication, but faced challenges from
+        wars with Siam and the British. Trade included teak, cotton, and
+        agricultural products, with foreign (especially European) traders
+        introducing new goods and ideas, though wars sometimes disrupted
+        business. Education was mainly in monasteries, but literacy and cultural
+        learning spread. Most people continued farming and following Buddhist
+        traditions, while contact with foreigners gradually influenced daily
+        life..
+      </p>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+
+        <div class="footer-column">
+          
+          <img src="logo.jpg" width="97%" height="97%" style="border-radius: 100%;">
+        </div>
+
+        <div class="footer-column">
+          <h3>CONTACT US</h3>
+          <ul>
+            <li>Phone: 099790682189</li>
+            <li>Email: myanmarhistory@gmail.com</li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>JOIN US</h3>
+          <ul>
+            <li><a href="login.html">Longin to be a part of us.</a></li>
+          </ul>
+        </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+          "
+        >
+          <div class="small">
+            <p>©The Bank of Myanmar History — Group Project by Tra La Min, Myat Thaw Htin, Hsu Waddy, and Nyei Thawdar Lwin </p>
+          </div>
+          <div class="small"><code></code></div>
+        </div>
+      </footer>
+
+  </body>
+</html>
