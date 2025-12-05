@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Bank of Myanmar History</title>
+    <meta
+      name="description"
+      content="Explore Myanmar's history from ancient city-states to the present. Curated designs and code by Hsu Waddy, Tra, Myat Thaw Htin, and Nyein Thawdar Lwin."
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --bg: #2b1a33; 
+        --card: #1e1226; 
+        --muted: #c1b3d1; 
+        --accent: #d4af37;
+        --glass: rgba(255, 255, 255, 0.06);
+        --max-width: 1100px;
+        font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+        color-scheme: dark;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        background: linear-gradient(180deg, #071428 0%, #061018 60%);
+        color: #e6eef6;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 28px;
+      }
+
+      header {
+        backdrop-filter: blur(6px);
+        background: linear-gradient(
+          180deg,
+          rgba(11, 17, 25, 0.55),
+          rgba(11, 17, 25, 0.2)
+        );
+        position: sticky;
+        top: 0;
+        z-index: 30;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 12px 0;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .logo {
+        width: 45px;
+        height: 52px;
+        border-radius: 10%;
+        background: linear-gradient(135deg, var(--accent), #8e6d48);
+        display: grid;
+        place-items: center;
+        font-weight: 700;
+        font-family: "Playfair Display";
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+      }
+      .brand h1 {
+        margin: 0;
+        font-family: "Playfair Display";
+        font-size: 18px;
+      }
+      .brand p {
+        margin: 0;
+        font-size: 12px;
+        color: var(--muted);
+      }
+
+      nav ul {
+        display: flex;
+        gap: 18px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 14px;
+      }
+
+      
+      .hero {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+        align-items: center;
+        padding: 56px 0;
+      }
+      .hero-inner {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+      }
+      .hero-text {
+        max-width: 640px;
+      }
+      .eyebrow {
+        font-size: 13px;
+        color: var(--muted);
+        letter-spacing: 1px;
+      }
+      .hero-title {
+        font-family: "Playfair Display";
+        font-size: 40px;
+        margin: 8px 0 12px;
+        line-height: 1.02;
+      }
+      .hero-sub {
+        color: var(--muted);
+        font-size: 16px;
+      }
+      .hero-actions {
+        margin-top: 18px;
+        display: flex;
+        gap: 12px;
+      }
+
+      .hero-media {
+        flex: 1;
+        min-height: 240px;
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 12px 40px rgba(2, 6, 23, 0.7);
+        background-image: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.25),
+          rgba(0, 0, 0, 0.45)
+        );
+        position: relative;
+      }
+      .hero-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .media-caption {
+        position: absolute;
+        left: 16px;
+        bottom: 14px;
+        background: var(--glass);
+        padding: 8px 12px;
+        border-radius: 10px;
+        font-size: 13px;
+        color: var(--muted);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+        margin-top: 28px;
+      }
+      @media (max-width: 800px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .card {
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.02),
+          rgba(255, 255, 255, 0.01)
+        );
+        padding: 18px;
+        border-radius: 14px;
+        border: 1px solid rgba(255, 255, 255, 0.03);
+        display: flex;
+        gap: 14px;
+        align-items: flex-start;
+      }
+      .card-thumb {
+        flex: 0 0 92px;
+        height: 92px;
+        border-radius: 10px;
+        overflow: hidden;
+        background: #061019;
+        display: grid;
+        place-items: center;
+        font-weight: 700;
+      }
+      .card-body h3 {
+        margin: 0;
+        font-family: "Playfair Display";
+        font-size: 18px;
+      }
+      .card-body p {
+        margin: 6px 0 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .meta {
+        margin-top: 10px;
+        font-size: 13px;
+        color: var(--muted);
+      }
+
+
+      .byline {
+        font-size: 13px;
+        color: var(--muted);
+      }
+      .small {
+        font-size: 13px;
+        color: var(--muted);
+      }
+
+      .card:hover {
+        transform: translateY(-6px);
+        transition: transform 0.28s cubic-bezier(0.2, 0.9, 0.3, 1);
+      }
+      .cta:hover {
+        opacity: 0.95;
+      }
+
+      .timeline {
+        margin-top: 28px;
+        padding: 18px;
+        border-radius: 12px;
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.14),
+          rgba(0, 0, 0, 0.06)
+        );
+        border: 1px solid rgba(255, 255, 255, 0.02);
+      }
+      .timeline ol {
+        padding-left: 18px;
+        margin: 0;
+      }
+      .timeline li {
+        margin: 12px 0;
+        color: var(--muted);
+      }
+            body {
+        font-family: "Georgia", serif;
+        margin: 0;
+        padding: 40px 0;
+        background: #0c0f16;
+        color: #e9d8a6;
+      }
+
+      .page-title {
+        text-align: center;
+        font-size: 2.6rem;
+        font-weight: bold;
+        letter-spacing: 2px;
+        margin-bottom: 50px;
+        text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+      }
+
+      .row {
+        display: grid;
+        gap: 25px;
+      }
+
+      .row-1 {
+        grid-template-columns: repeat(2, 1fr);
+        width: 70%;
+      }
+
+      .row-2 {
+        grid-template-columns: repeat(2, 1fr);
+        width: 70%;
+      }
+
+      .row-3 {
+        grid-template-columns: 1fr;
+        width: 60%;
+      }
+
+      .box {
+        background: #1b1f29;
+        border: 1px solid #554a2b;
+        border-radius: 14px;
+        overflow: hidden;
+        transition: transform 0.2s;
+        box-shadow: 0 0 15px rgba(255, 215, 0, 0.08);
+      }
+
+      .box:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 0 25px rgba(255, 215, 0, 0.15);
+      }
+
+      .text-area {
+        padding: 18px;
+      }
+
+      .text-area h2 {
+        margin: 0 0 10px;
+        font-size: 1.3rem;
+        color: #f0e4c5;
+      }
+
+      .text-area p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        opacity: 0.92;
+      }
+
+      .box-link {
+      display: flex; 
+      padding: 10px 10px;
+      border: 2px solid #4f4c05;
+      background-color: #ffe169;
+      color: #321818;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      justify-content: center;
+      align-items: center;
+      }
+
+      
+      .box-link:hover {
+      background-color: #ffffff;
+      transform: scale(1.05);
+      transition: 0.2s;
+      }
+
+
+      
+      .back-btn:hover {
+        background: #ffdd00;
+        transform: translateY(-2px);
+      }
+
+      @media (max-width: 800px) {
+        .row-1,
+        .row-2,
+        .row-3 {
+          width: 95%;
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .footer {
+        color: #fff;
+        padding: 50px 20px;
+        font-family: Arial, sans-serif;
+      }
+
+      .footer-container {
+        max-width: 1300px;
+        margin: auto;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+
+      .footer-column {
+        width: 23%;
+        min-width: 200px;
+      }
+
+      .footer-column h3 {
+        font-size: 16px;
+        margin-bottom: 15px;
+        letter-spacing: 2px;
+      }
+
+      .footer-column ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-column ul li {
+        margin-bottom: 10px;
+      }
+
+      .footer-column ul li a {
+        color: #cfcfcf;
+        text-decoration: none;
+      }
+
+      .footer-column ul li a:hover {
+        color: #fff;
+      }
+
+      .social-icons span {
+        font-size: 28px;
+        margin-right: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+        <div class="brand">
+          <img
+            src="logo.jpg"
+            alt="Description"
+            style="width: 16%; height: 60%; border-radius: 100%"
+          />
+          <div>
+            <h1>The Bank of Myanmar History</h1>
+            <p class="small">Explore about Myanmar's history!</p>
+          </div>
+        </div>
+
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ancient_city-states_period.html">Ancient City</a></li>
+            <li><a href="three_burmese_kingdoms.html">Three Burmese Kingdom</a></li>
+            <li><a href="coloni.html">Colonial Period</a></li>
+            <li><a href="post_independence_period.html">Post-Independence</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <div class="hero-inner">
+          <div class="hero-text">
+            <div class="eyebrow">The vault of Myanmar’s stories</div>
+            <h2 class="hero-title">
+              From ancient city-states to the present day — curated, designed,
+              and coded by our team.
+            </h2>
+            <p class="hero-sub">
+              The Bank of Myanmar History will explain about parts of the Myanmar's History. Hope you enjoiy exploring our website!
+            </p>
+
+            <div class="hero-actions">
+              <a class="cta" href="#archives">Browse the Archives</a>
+              <a class="small" href="#credits">Meet the Team</a>
+            </div>
+
+            <div style="margin-top: 20px" class="byline">
+              This Website is made with love and care.
+            </div>
+          </div>
+
+          <div class="hero-media" aria-hidden="true">
+            <img src="hero-bagan.jpg" alt="Ancient temple" />
+            <div class="media-caption">Bagan</div>
+          </div>
+        </div>
+
+        
+<section id="archives">
+  <h2 class="page-title">Historical Highlights</h2>
+
+  <div class="container">
+
+    <div class="row row-1">
+      
+      <div class="box">
+        <div class="text-area">
+          <h2>Ancient City-States Period</h2>
+          <p>
+            Early settlements and powerful city-states that laid the foundations
+            for Burmese culture, trade, and religion.
+          </p>
+          <a class="box-link" href="ancient_city-states_period.html">
+            Learn More
+          </a>
+        </div>
+      </div>
+
+      
+      <div class="box">
+        <div class="text-area">
+          <h2>Three Burmese Kingdoms</h2>
+          <p>
+            Explore the rise of Bagan, Toungoo, and Konbaung — dynasties that
+            shaped the nation politically and culturally.
+          </p>
+          <a class="box-link" href="three_burmese_kingdoms.html">
+            Learn More
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row row-2">
+      
+      <div class="box">
+        <div class="text-area">
+          <h2>Colonial Period</h2>
+          <p>
+            British rule, cultural change, and the root of independence movements
+            that transformed Myanmar.
+          </p>
+          <a class="box-link" href="coloni.html">
+            Learn More
+          </a>
+        </div>
+      </div>
+
+      
+      <div class="box">
+        <div class="text-area">
+          <h2>Post-Independence (1948–Present)</h2>
+          <p>
+            From independence to modern times: national identity, politics,
+            society, and ongoing history.
+          </p>
+          <a class="box-link" href="post_independence_period.html">
+            Learn More
+          </a>
+        </div>
+      </div>
+    </div>
+
+      <section class="timeline" id="timeline">
+        <h3 style="margin: 0 0 12px; font-family: 'Playfair Display'">
+          Featured Timeline
+        </h3>
+        <p class="small"></p>
+        <ol>
+          <li>
+            <strong>City-States Era:</strong> Pre-9th century — early kingdoms
+            and trade hubs (Thaton, Pyu city-states, Dvaravati influences).
+          </li>
+          <li>
+            <strong>Bagan Kingdom:</strong> 9th–13th centuries — temple-building
+            and Theravada consolidation.
+          </li>
+          <li>
+            <strong>Taungoo & Konbaung:</strong> 16th–19th centuries —
+            reunification, expansion, and royal patronage of the arts.
+          </li>
+          <li>
+            <strong>Colonial Period:</strong> 1824–1948 — gradual annexation,
+            social change, and nationalist movements.
+          </li>
+          <li>
+            <strong>Post-Independence:</strong> 1948–present — independence,
+            modern state-building, and cultural revival.
+          </li>
+        </ol>
+      </section>
+
+      <section
+        style="
+          margin-top: 28px;
+          display: grid;
+          grid-template-columns: 1fr 320px;
+          gap: 20px;
+          align-items: start;
+        "
+      >
+        <div>
+          <h3 style="font-family: 'Playfair Display'">About the Project</h3>
+          <p class="small">
+            The Bank of Myanmar History is a collaborative student project meant
+            to collect, curate, and present Myanmar's historical eras in a
+            modern, accessible format. Each archive is crafted with visual
+            design and coded interactions so history can be explored by anyone.
+          </p>
+
+          <p class="small">
+            Want to contribute images, primary sources, or help with
+            translations? Reach out — this is a growing vault and we welcome new
+            deposits.
+          </p>
+        </div>
+
+        <aside
+          style="
+            background-color:#2b1a33;
+            padding: 16px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.02);
+          "
+        >
+          <h4 style="margin: 0 0 8px">Overview</h4>
+          <ul style="margin: 0; padding-left: 14px; color: var(--muted)">
+            <li><a href="#ancient-title">Ancient City-States</a></li>
+            <li><a href="#three-title">Three Burmese Kingdoms</a></li>
+            <li><a href="#colonial-title">Colonial Period</a></li>
+            <li><a href="#post-title">Post-Independence</a></li>
+          </ul>
+        </aside>
+      </section>
+
+      <section
+        id="credits"
+        style="
+          margin-top: 28px;
+          padding: 16px;
+          border-radius: 12px;
+          background-color: rgb(2, 2, 70);
+          border: 1px solid rgba(255, 255, 255, 0.02);
+        "
+      >
+        <h3 style="font-family: 'Playfair Display'">The Team</h3>
+        <p class="small">Design and code by the student team:</p>
+        <ul
+          class="small"
+          style="margin-top: 8px; padding-left: 18px; color: var(--muted)"
+        >
+          <li><strong>Hsu Waddy</strong> (Ancient City-States)</li>
+          <li><strong>Tra La Min</strong> (Three Burmese Kingdoms)</li>
+          <li><strong>Myat Thaw Htin</strong> (Colonial Period)</li>
+          <li>
+            <strong>Nyein Thawdar Lwin</strong> (Post-Independence)
+          </li>
+        </ul>
+
+        <p class="small" style="margin-top: 12px">
+          Built with love for learning, and presentation!
+        </p>
+      </section>
+
+      <footer class="footer">
+      <div class="footer-container">
+
+        <div class="footer-column">
+          
+          <img src="logo.jpg" width="97%" height="97%" style="border-radius: 100%;">
+        </div>
+
+        <div class="footer-column">
+          <h3>CONTACT US</h3>
+          <ul>
+            <li>Phone: 099790682189</li>
+            <li>Email: myanmarhistory@gmail.com</li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>JOIN US</h3>
+          <ul>
+            <li><a href="login.html">Longin to be a part of us.</a></li>
+          </ul>
+        </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+          "
+        >
+          <div class="small">
+            <p>©The Bank of Myanmar History — Group Project by Tra La Min, Myat Thaw Htin, Hsu Waddy, and Nyei Thawdar Lwin </p>
+          </div>
+          <div class="small"><code></code></div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
